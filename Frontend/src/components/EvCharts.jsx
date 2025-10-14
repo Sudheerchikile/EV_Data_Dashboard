@@ -75,7 +75,7 @@ function EVCountByMake() {
       count: items.length,
     }))
     .sort((a, b) => b.count - a.count)
-    .slice(0, 15);
+    .slice(0, 10);
 
   return (
     <div className="chart-container">
