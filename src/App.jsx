@@ -3,7 +3,7 @@ import "./App.css";
 import EVCountByMake from "./components/EvCharts";
 import RawCount from "./components/RawCount";
 import EVAdaptionChart from "./components/EvAdaption";
-import ModelMakeChart from "./components/ModelMakeChart";
+
 import EVAdoptionComparison from "./components/EvComparision";
 import EvTypePieChart from "./components/EvTypePieChart";
 import TopCounties from "./components/TopCounties";
