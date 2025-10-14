@@ -1,0 +1,112 @@
+/* ================================
+   FILTERS - CLEAN PROFESSIONAL DESIGN
+================================ */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(51, 65, 85, 0.3);
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.filters > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters label {
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.filters select,
+.filters input {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.filters select option {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 0.5rem;
+}
+
+.filters select:hover,
+.filters input:hover {
+  border-color: #3b82f6;
+  background: #293548;
+}
+
+.filters select:focus,
+.filters input:focus {
+  border-color: #3b82f6;
+  background: #293548;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filters input[type="number"] {
+  min-width: 100px;
+}
+
+.filters span {
+  color: #94a3b8;
+  align-self: center;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Dropdown */
+.dropdown {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 0 1.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.938rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown:hover {
+  border-color: #3b82f6;
+  background: #293548;
+}
+
+.dropdown:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dropdown option {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
