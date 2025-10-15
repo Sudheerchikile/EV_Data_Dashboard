@@ -3,10 +3,10 @@ import "./App.css";
 import EVCountByMake from "./components/EvCharts";
 import RawCount from "./components/RawCount";
 import EVAdaptionChart from "./components/EvAdaption";
-
 import EVAdoptionComparison from "./components/EvComparision";
 import EvTypePieChart from "./components/EvTypePieChart";
 import TopCounties from "./components/TopCounties";
+import EVMap from "./components/EvMap";
 
 function App() {
   return (
@@ -63,9 +63,17 @@ function App() {
         </div>
       </section>
 
+      {/* Geographic Distribution Map */}
+      <section className="map-section">
+        <h2 className="section-title">Geographic Distribution</h2>
+        <div className="chart-card full-width">
+          <EVMap />
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="dashboard-footer">
-        <p>Built with React + Recharts | Data visualization for EV market analysis</p>
+        <p>Built with React + Recharts + Leaflet | Data visualization for EV market analysis</p>
       </footer>
     </div>
   );

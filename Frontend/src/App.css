@@ -136,7 +136,8 @@ section {
 }
 
 .analytics-section,
-.deep-dive-section {
+.deep-dive-section,
+.map-section {
   padding: 2rem;
 }
 
