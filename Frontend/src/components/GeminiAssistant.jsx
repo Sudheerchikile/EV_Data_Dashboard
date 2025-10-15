@@ -7,11 +7,10 @@ const GeminiAssistant = ({ allChartsData }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const getApiUrl = () => {
-    return window.location.hostname === 'localhost' 
-      ? 'http://localhost:5000'
-      : 'https://ev-data-dashboard.onrender.com';
-  };
+  // Use relative URL - works for both local dev and production
+  const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000'
+    : window.location.origin;
 
   const generateInsights = async () => {
     setLoading(true);
@@ -28,7 +27,7 @@ const GeminiAssistant = ({ allChartsData }) => {
         totalVehicles: allChartsData.totalVehicles || 0,
       };
 
-      const response = await fetch(`${getApiUrl()}/api/generate-insights`, {
+      const response = await fetch(`${API_BASE_URL}/api/generate-insights`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

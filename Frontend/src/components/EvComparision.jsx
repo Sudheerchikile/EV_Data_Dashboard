@@ -11,6 +11,11 @@ import {
 } from "recharts";
 import "./EvComparision.css";
 
+// API URL configuration
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5000'
+  : window.location.origin;
+
 const EVAdoptionComparison = () => {
   const [data, setData] = useState([]);
   const [selectedMake1, setSelectedMake1] = useState("BMW");
@@ -76,7 +81,7 @@ const EVAdoptionComparison = () => {
         make2Total: Object.values(make2Data).reduce((a, b) => a + b, 0),
       };
 
-      const response = await fetch("http://localhost:5000/api/generate-insights", {
+      const response = await fetch(`${API_BASE_URL}/api/generate-insights`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +105,7 @@ const EVAdoptionComparison = () => {
     } catch (err) {
       console.error("Error generating insights:", err);
       setInsights(
-        "⚠️ Unable to generate insights. Make sure the backend server is running on port 5000."
+        "⚠️ Unable to generate insights. Please check your connection and try again."
       );
     } finally {
       setLoading(false);
