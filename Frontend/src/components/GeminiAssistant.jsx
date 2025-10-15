@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import "./GeminiAssistant.css";
 
 const GeminiAssistant = ({ allChartsData }) => {
@@ -121,10 +122,8 @@ const GeminiAssistant = ({ allChartsData }) => {
                     🔄 Regenerate
                   </button>
                 </div>
-                <div className="insights-text">
-                  {insights.split('\n').map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
+                <div className="insights-text markdown-content">
+                  <ReactMarkdown>{insights}</ReactMarkdown>
                 </div>
               </div>
             )}

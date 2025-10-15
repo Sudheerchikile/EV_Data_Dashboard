@@ -290,6 +290,112 @@
   margin-bottom: 0;
 }
 
+/* ================================
+   MARKDOWN CONTENT STYLING
+================================ */
+.insights-text.markdown-content h1,
+.insights-text.markdown-content h2,
+.insights-text.markdown-content h3,
+.insights-text.markdown-content h4 {
+  color: #f1f5f9;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.insights-text.markdown-content h1:first-child,
+.insights-text.markdown-content h2:first-child,
+.insights-text.markdown-content h3:first-child {
+  margin-top: 0;
+}
+
+.insights-text.markdown-content h1 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #475569;
+  padding-bottom: 0.5rem;
+}
+
+.insights-text.markdown-content h2 {
+  font-size: 1.25rem;
+  color: #60a5fa;
+}
+
+.insights-text.markdown-content h3 {
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+.insights-text.markdown-content ul,
+.insights-text.markdown-content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  color: #e2e8f0;
+}
+
+.insights-text.markdown-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.insights-text.markdown-content strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.insights-text.markdown-content em {
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+.insights-text.markdown-content code {
+  background: #1e293b;
+  color: #38bdf8;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875em;
+}
+
+.insights-text.markdown-content pre {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.insights-text.markdown-content pre code {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+
+.insights-text.markdown-content blockquote {
+  border-left: 3px solid #667eea;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+.insights-text.markdown-content a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.insights-text.markdown-content a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.insights-text.markdown-content hr {
+  border: none;
+  border-top: 1px solid #334155;
+  margin: 1.5rem 0;
+}
+
 /* Footer */
 .assistant-footer {
   padding: 1rem 1.25rem;

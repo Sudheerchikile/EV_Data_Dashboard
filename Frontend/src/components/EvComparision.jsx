@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import {
   LineChart,
   Line,
@@ -246,10 +247,8 @@ const EVAdoptionComparison = () => {
               <p>Analyzing comparison data with AI...</p>
             </div>
           ) : (
-            <div className="insights-content-box">
-              {insights.split('\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+            <div className="insights-content-box markdown-content">
+              <ReactMarkdown>{insights}</ReactMarkdown>
             </div>
           )}
         </div>
